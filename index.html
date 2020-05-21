@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        (function () {
+            var sUserAgent = navigator.userAgent.toLowerCase(),
+                bIsIpad = sUserAgent.match(/ipad/i) == "ipad",
+                bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os",
+                bIsMidp = sUserAgent.match(/midp/i) == "midp",
+                bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4",
+                bIsUc = sUserAgent.match(/ucweb/i) == "ucweb",
+                bIsAndroid = sUserAgent.match(/android/i) == "android",
+                bIsCE = sUserAgent.match(/windows ce/i) == "windows ce",
+                bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                window.location.href = "m/";
+            }
+        })();
+    </script>
+    <link rel="icon" type="image/x-icon" href="https://lzx1806.top/img/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>三木の博客</title>
+    <link href='https://cdn.repository.webfont.com/webfonts/nomal/137874/47755/5ea7fee4f629d80d5ce25642.css' rel='stylesheet' type='text/css' media="print" onload='this.media="all"' /> <!-- Bold -->
+    <link href='https://cdn.repository.webfont.com/webfonts/nomal/137874/47751/5eaa2e73f629d81024b5faae.css' rel='stylesheet' type='text/css' media="print" onload='this.media="all"' /> <!-- Medium -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <a href="https://lzx1806.top/" class="hb">
+            <div class="c">
+                <img src="https://gitee.com/leeliner/blogimage/raw/master/img/3.png" />
+                <div class="txt">
+                    <h1>主页</h1>
+                    <p>从二月十八起，每天都过得很幸福</p>
+                </div>
+            </div>
+        </a>
+        <div class="fullBg">
+            <img src="https://gitee.com/leeliner/blogimage/raw/master/img/3.png" />
+        </div>
+        <a href="https://lzx1806.top/archives/" class="hb">
+            <div class="c">
+                <img src="https://gitee.com/leeliner/blogimage/raw/master/img/1.png" />
+                <div class="txt">
+                    <h1>文章归档</h1>
+                    <p>记录终将到来的爱情，写下即将过去的幸福</p>
+                </div>
+            </div>
+        </a>
+        <div class="fullBg">
+            <img src="https://gitee.com/leeliner/blogimage/raw/master/img/1.png" />
+        </div>
+        <a href="https://lzx1806.top/sign/" class="hb">
+            <div class="c">
+                <img src="https://gitee.com/leeliner/blogimage/raw/master/img/2.png?fmt=webp" />
+                <div class="txt">
+                    <h1>打卡客栈</h1>
+                    <p>每天努力一点点，离娶你就近一丢丢</p>
+                </div>
+            </div>
+        </a>
+        <div class="fullBg">
+            <img src="https://gitee.com/leeliner/blogimage/raw/master/img/2.png?fmt=webp" />
+        </div>
+        <a href="https://lzx1806.top/about/" class="hb">
+            <div class="c">
+                <img src="https://gitee.com/leeliner/blogimage/raw/master/img/4.png?fmt=webp" />
+                <div class="txt">
+                    <h1>关于我</h1>
+                    <p>一个不愿意透露姓名的热心市民李某</p>
+                </div>
+            </div>
+        </a>
+        <div class="fullBg">
+            <img src="https://gitee.com/leeliner/blogimage/raw/master/img/4.png?fmt=webp" />
+        </div>
+    </div>
+    <!--<a href="https://myssl.com/seal/detail?domain=royce2003.top" target="_blank"><img
+            src="https://rmt.dogedoge.com/fetch/royce/storage/test/myssl.png?fmt=webp&w=70"
+            style="position:fixed;right:0;bottom:0;width:3.4375rem;z-index:99;"></a>
+    <div class="beian-icp">
+        <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">闽ICP备20005437号-1</a>
+    </div>-->
+    <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var docWidth = $('body').width(),
+                $wrap = $('#wrap'),
+                $images = $('#wrap .hb'),
+                slidesWidth = $wrap.width();
+            $(window).on('resize', function () {
+                docWidth = $('body').width();
+                slidesWidth = $wrap.width();
+            })
+            $(document).mousemove(function (e) {
+                var mouseX = e.pageX,
+                    offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+                $images.css({
+                    '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                    'transform': 'translate3d(' + -offset + 'px,0,0)'
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
+<!-- base on http://www.htmleaf.com/jQuery/Layout-Interface/201901175498.html -->
