@@ -16,8 +16,8 @@ html {
   height: 100%;
   font-size: 16px;
   font-family:'SourceHanSerif-206564f5a921a92', 'SourceHanSerif-206deebc8721a92'; /* Bold, Medium */
-  color: #fff;
-  background: #0000006e;
+  color: #FFE1FF;
+  background: linear-gradient(-45deg, #FFD972, #EFA7A7, #FCBCB8, #A7E8BD) 0% 0% / 400% 400%;
 }
 #wrap {
   position: absolute;
